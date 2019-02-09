@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "Better FB Marketplace",
+  "description": "Adds chronological sorting to Facebook Marketplace",
+  "version": "1.1",
+
+  "permissions": [
+    "storage",
+	"https://www.facebook.com/marketplace/*"
+  ],
+  "browser_action": {
+    "default_title": "Better FB Marketplace",
+    "default_icon": "images/icon.png",
+    "default_popup": "html/popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.facebook.com/marketplace/*"],
+      "js": ["js/jquery-1.10.2.min.js","js/settings.js","js/main.js"]
+    }
+	]
+}

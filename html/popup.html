@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Title of the extension</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-1.10.2.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/settings.js"></script>
+    <script src="../js/main.js"></script>
+  </head>
+  <body>
+    
+    <ul class="nav nav-tabs" id="main-nav">
+      <li class="active"><a href="#home">Home</a></li>
+      <li><a href="#settings"><span class="glyphicon glyphicon-wrench"></span></a></li>
+    </ul>
+
+    <div class="tab-content">
+
+      <div class="tab-pane active" id="home">
+        <!-- Content will be appended here. Check js/main,js -->
+      </div>
+      
+      <!-- The settings pane, expand at will -->
+      <div class="tab-pane" id="settings">
+        <form class="settings">
+          <div class="form-item">
+            <label for="text-field">Textfield</label>
+            <input type="text" name="text-field" />
+          </div>
+
+          <div class="form-item">
+            <label for="checkbox-field">Checkbox</label>
+            <input type="checkbox" name="checkbox-field" />
+          </div>
+          
+          <div class="form-item">
+            <label for="select-field">Select</label>
+            <select name="select-field">
+              <option value="item-1">Item 1</option>
+              <option value="item-2">Item 2</option>
+              <option value="item-3">Item 3</option>
+            </select>
+          </div>
+
+          <div class="form-item">
+            <label for="select-field">Radio</label>
+            <input type="radio" name="sex" value="male">Male<br>
+            <input type="radio" name="sex" value="female">Female
+          </div>
+
+          <div class="form-item">
+            <button type="button" class="btn btn-success save-settings">Save</button>
+            <button type="button" class="btn btn-warning cancel-settings">Cancel</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+  </body>
+</html>
