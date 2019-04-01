@@ -37,12 +37,12 @@ jQuery.noConflict();
 
         function sortTime() {
             //Get the maretplace listings
-            var mylist = $('._65db');
+            var mylist = $('._65db').first();
             //Get the children
-            var listitems = mylist.children('a').get();
+            var listitems = mylist.find('a');
             listitems = uniq(listitems);
             //listitems = listitems.unique()
-            //console.log("Sorting");
+            console.log("Sorting");
             listitems.sort(function(a, b) {
                 //Children grabs a single div, first selects it, children called selects the 2nd div child, another children 1 gets the element with time 
                 var compA = $($($($($(a).children()[0])).children()[1]).children()[1]).text().split(" · ")[1];
@@ -119,7 +119,7 @@ jQuery.noConflict();
                     var r = /\d+/;
                     intcompB = parseInt(compB.match(r))
                 }
-                //console.log(compA + " " + compB);
+                console.log(compA + " " + compB);
                 if (intcompB > intcompA) {
                     return -1;
                 } else if (intcompA > intcompB) {
@@ -129,19 +129,19 @@ jQuery.noConflict();
                 }
             });
             mylist = mylist.remove("a");
-            //console.log(listitems)
+            console.log(listitems)
             return [listitems,mylist];
         }
 
         function sortPrice() {
             //Get the maretplace listings
-            var mylist = $('._65db');
-            //console.log(mylist)
+            var mylist = $('._65db').first();
+            console.log(mylist)
             //Get the children
-            var listitems = mylist.children('a').get();
+            var listitems = mylist.find('a');
             listitems = uniq(listitems);
             //listitems = listitems.unique()
-            //console.log("Sorting");
+            console.log("Sorting");
             listitems.sort(function(a, b) {
                 //Children grabs a single div, first selects it, children called selects the 2nd div child, another children 1 gets the element with time 
                 var compA = $($($($($(a).children()[0])).children()[0]).children()[0]).text().replace(',', '');
@@ -165,7 +165,7 @@ jQuery.noConflict();
                 }
                 //return (compA < compB) ? -1 : (compA > compB) ? 1 : 0;
             });
-            //console.log(listitems)
+            console.log(listitems)
             mylist = mylist.remove("a");
 			return [listitems,mylist];
         }
